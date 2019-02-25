@@ -1,0 +1,23 @@
+{
+  "name": "cs440",
+  "version": "1.0.0",
+  "description": "Test Push",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"cd ./backend && nodemon Server.js\" \"cd ./frontend && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guptaso/cs440.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guptaso/cs440/issues"
+  },
+  "homepage": "https://github.com/guptaso/cs440#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
