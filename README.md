@@ -1,6 +1,6 @@
 #### Start MongoDB
 ```
-Sudo service mongodb start
+sudo service mongodb start
 ```
 #### Import Master CSV to Mongo.
 ```
