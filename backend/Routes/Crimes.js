@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const CrimeSchema = require('../CrimeModel');
 
-// http://localhost:4000/Crimes
+// http://localhost:4000/Crime
 router.get('/', async (req, res) =>{
     var State = await CrimeSchema.aggregate([{
         $group: 
@@ -26,7 +26,7 @@ router.get('/', async (req, res) =>{
     res.send(State);
 })
 
-// http://localhost:4000/Crimes/StateName/CityName
+// http://localhost:4000/Crime/StateName/CityName
 router.get('/:crime', async(req, res) => {
     var State = await CrimeSchema.aggregate([{
         $group: 

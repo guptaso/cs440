@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const CrimeSchema = require('../CrimeModel');
 
-// http://localhost:4000/Cities/StateName/CityName
+// http://localhost:4000/City/StateName/CityName
 router.get('/:state/:city', async(req, res) => {
     var State = await CrimeSchema.aggregate([
         {$match: { $and: [            
@@ -20,7 +20,7 @@ router.get('/:state/:city', async(req, res) => {
     res.send(State);
 });
 
-// http://localhost:4000/Cities/StateName/CityName/CrimeName
+// http://localhost:4000/City/StateName/CityName/CrimeName
 router.get('/:state/:city/:crime',async(req, res) => {
     var State = await CrimeSchema.aggregate(
     [
