@@ -125,14 +125,14 @@ getObjectName(obj, index){
               <tr key={Stat._id}>
                 <th>{this.getObjectName(Stat, 1)} {Stat.ViolentCrime} </th>
                 <th>{this.getObjectName(Stat, 2)} {Stat.MurderManslaughter} </th>
-                <th>{this.getObjectName(Stat, 3)} {Stat.Totalrape} </th>
-                <th>{this.getObjectName(Stat, 4)} {Stat.TotalRobbery} </th>
-                <th>{this.getObjectName(Stat, 5)} {Stat.TotalRobbery} </th>
-                <th>{this.getObjectName(Stat, 6)} {Stat.TotalPropertyCrime} </th>
-                <th>{this.getObjectName(Stat, 7)} {Stat.TotalBurglary} </th>
-                <th>{this.getObjectName(Stat, 8)} {Stat.TotalRobbery} </th>
-                <th>{this.getObjectName(Stat, 9)} {Stat.TotalMotorTheft} </th>
-                <th>{this.getObjectName(Stat, 10)}  {Stat.TotalRobbery} </th>
+                <th>{this.getObjectName(Stat, 3)} {Stat.Rape} </th>
+                <th>{this.getObjectName(Stat, 4)} {Stat.Robbery} </th>
+                <th>{this.getObjectName(Stat, 5)} {Stat.Assault} </th>
+                <th>{this.getObjectName(Stat, 6)} {Stat.PropertyCrime} </th>
+                <th>{this.getObjectName(Stat, 7)} {Stat.Burglary} </th>
+                <th>{this.getObjectName(Stat, 8)} {Stat.Theft} </th>
+                <th>{this.getObjectName(Stat, 9)} {Stat.MotorTheft} </th>
+                <th>{this.getObjectName(Stat, 10)}  {Stat.Arson} </th>
               </tr>
             )}
           </tbody>

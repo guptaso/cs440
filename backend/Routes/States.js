@@ -13,16 +13,16 @@ router.use(function(req, res, next) {
 router.get('/', async (req, res) => {
     const crime = await CrimeSchema.aggregate([
     { $group: { _id: "$State", 
-    Violentcrime: { $sum: "$ViolentCrime" },
-    TotalMurderAndManslaughter: {$sum: "$MurderManslaughter"},
-    Totalrape: {$sum: "$Rape"},
-    TotalRobbery: {$sum: "$Robbery"},
-    TotalAssault: {$sum: "$Assault"},
-    TotalPropertyCrime: {$sum: "$PropertyCrime"},
-    TotalBurglary: {$sum: "$Burglary"},
-    TotalTheft: {$sum: "$Theft"},
-    TotalMotorTheft: {$sum: "$MotorTheft"},
-    TotalArson: {$sum: "$Arson"}
+    ViolentCrime: { $sum: "$ViolentCrime" },
+    MurderManslaughter: {$sum: "$MurderManslaughter"},
+    Rape: {$sum: "$Rape"},
+    Robbery: {$sum: "$Robbery"},
+    Assault: {$sum: "$Assault"},
+    PropertyCrime: {$sum: "$PropertyCrime"},
+    Burglary: {$sum: "$Burglary"},
+    Theft: {$sum: "$Theft"},
+    MotorTheft: {$sum: "$MotorTheft"},
+    Arson: {$sum: "$Arson"}
     }}]) 
 
     if(!crime) res.status(404)
@@ -37,16 +37,16 @@ router.get('/:state', async(req, res) => {
         { $match: { State: { $eq: req.params.state
         }}},    
         { $group: { _id: "$State", 
-        Violentcrime: { $sum: "$ViolentCrime" },
-        Totalmurderandmanslaughter: {$sum: "$MurderManslaughter"},
-        Totalrape: {$sum: "$Rape"},
-        TotalRobbery: {$sum: "$Robbery"},
-        TotalAssault: {$sum: "$Assault"},
-        TotalPropertyCrime: {$sum: "$PropertyCrime"},
-        TotalBurglary: {$sum: "$Burglary"},
-        TotalTheft: {$sum: "$Theft"},
-        TotalMotorTheft: {$sum: "$MotorTheft"},
-        TotalArson: {$sum: "$Arson"}
+        ViolentCrime: { $sum: "$ViolentCrime" },
+        MurderManslaughter: {$sum: "$MurderManslaughter"},
+        Rape: {$sum: "$Rape"},
+        Robbery: {$sum: "$Robbery"},
+        Assault: {$sum: "$Assault"},
+        PropertyCrime: {$sum: "$PropertyCrime"},
+        Burglary: {$sum: "$Burglary"},
+        Theft: {$sum: "$Theft"},
+        MotorTheft: {$sum: "$MotorTheft"},
+        Arson: {$sum: "$Arson"}
         }}]) 
 
     if(!state) res.status(404)
