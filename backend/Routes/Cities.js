@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const CrimeSchema = require('../CrimeModel');
 
+router.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+  
 // http://localhost:4000/City/StateName/CityName
 router.get('/:state/:city', async(req, res) => {
     var State = await CrimeSchema.aggregate([
