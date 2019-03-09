@@ -14,16 +14,16 @@ router.get('/', async (req, res) =>{
         $group: 
         { 
             _id: null, 
-            Violentcrime: { $sum: "$ViolentCrime" },
-            Totalmurderandmanslaughter: {$sum: "$MurderManslaughter"},
-            Totalrape: {$sum: "$Rape"},
-            TotalRobbery: {$sum: "$Robbery"},
-            TotalAssault: {$sum: "$Assault"},
-            TotalPropertyCrime: {$sum: "$PropertyCrime"},
-            TotalBurglary: {$sum: "$Burglary"},
-            TotalTheft: {$sum: "$Theft"},
-            TotalMotorTheft: {$sum: "$MotorTheft"},
-            TotalArson: {$sum: "$Arson"}
+            ViolentCrime: { $sum: "$ViolentCrime" },
+            MurderManslaughter: {$sum: "$MurderManslaughter"},
+            Rape: {$sum: "$Rape"},
+            Robbery: {$sum: "$Robbery"},
+            Assault: {$sum: "$Assault"},
+            PropertyCrime: {$sum: "$PropertyCrime"},
+            Burglary: {$sum: "$Burglary"},
+            Theft: {$sum: "$Theft"},
+            MotorTheft: {$sum: "$MotorTheft"},
+            Arson: {$sum: "$Arson"}
         }
     }]);
 
@@ -45,7 +45,7 @@ router.get('/:crime', async(req, res) => {
 }]);
 
     var string = JSON.stringify(State);
-    string = string.replace("\"TotalCrime\":", "\x22" + "Total" + req.params.crime+ "\x22" + ":");
+    string = string.replace("\"TotalCrime\":", "\x22" + req.params.crime+ "\x22" + ":");
     State = JSON.parse(string);
 
     if(!State) res.status(404)
