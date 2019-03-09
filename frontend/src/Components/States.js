@@ -5,32 +5,38 @@ class States extends Component {
  constructor(props){
    super(props);
 
+   //These are the react state variables we are using.
    this.state = {
      State: 'Crime',
      Crime: '',
      Stat: []
    }; 
 
+  //Binding our functions to work with the current react state.
    this.handleSubmit = this.handleSubmit.bind(this);
    this.handleChange = this.handleChange.bind(this);
    this.getObjectName = this.getObjectName.bind(this);
  }
-
+//Changing the objects currently held in the react state to whatever the user selects for example if State = Arizona and a user then changes their choice to Alaska, this function makes State=Alaska.
  handleChange(e) {
   this.setState({
     [e.target.name]: e.target.value
   })
  }
 
-
+//This is the submit handler that is called when a user submits their inputs.
 handleSubmit(e){
+    //Don't allow blank submits
   e.preventDefault();
-  console.log(this.state.State  +  '/' + this.state.Crime)
+  //Grab the State City and Crime that the user wants to submit will look like this localhost:4000/State/City/Crime
    fetch(this.state.State  +  '/' + this.state.Crime)
+     //Get the response from the server
    .then(res => res.json())
+      //Set our Stat array to the response which was returned from the API
    .then(Stat => this.setState({Stat}, () => console.log('Crime fetched', Stat)));
 }
 
+//All I am doing with this function is grabbing the name that correlates with each peice of the JSON object for example if I get the statistics for Violent Crime this will return ViolentCrime.
 getObjectName(obj, index){
   var name = Object.keys(obj)[index];
   return name;
@@ -40,8 +46,10 @@ getObjectName(obj, index){
   render() {
     return (
 <div> 
+    {/*This is where the user will select the State */}
     <div className="StateSelect">      
       <p>Select The State: </p>
+      {/* this.state.State is making it so our react state variable "State" is set to the value currently selected, this.handleChange ensures the changes happen. */}
       <select value={this.state.State} onChange={this.handleChange} name="State" form="Inputform">
           <option value="Crime/">All States</option>
           <option value="/State/Alabama">Alabama</option>
@@ -96,7 +104,7 @@ getObjectName(obj, index){
           <option value="/State/Wyoming">Wyoming</option>
         </select>
       </div>
-  
+         {/*Here is a input for the user to select a crime, the value for the react state value "Crime" is set the same as above.  */}
       <div className="CrimeSelect">
         <p>Select The Crime: </p>
        <select value={this.state.Crime} onChange={this.handleChange} name="Crime" form="Inputform">
@@ -113,18 +121,22 @@ getObjectName(obj, index){
           <option value="Arson">Arson</option>
         </select>		
       </div>
-      
+
+        {/*Here is our actual form that holds everything as well as the submit button, notice on the form it has a "onSubmit" which will trigger our handleSubmit function.*/}
       <div className="SubmitButton">
         <br/>
         <form id="Inputform" onSubmit={this.handleSubmit} >
           <input type="submit" value="Submit" />
         </form>
       </div>
-
+ {/* This is where the reponse from the API which is grabbed by our handleSubmit function is displayed.*/}
       <table className="DisplayStats">
           <tbody>
+            {/* This "map" is a for loop that will loop through our react state object "Stat" which is an object that holds and array of JSON objects, this will display all JSON held in our reponse. */}
             {this.state.Stat.map(Stat => 
               <tr key={Stat._id}>
+              {/* On the left we call the getObjectName to get the Name of the Statistic for example MurderManSlaughter, on the right we are grabbing the actual statistic for example 206.
+              Together these would display as MurderManSlaughter 206*/}
                 <th>{this.getObjectName(Stat, 1)} {Stat.ViolentCrime} </th>
                 <th>{this.getObjectName(Stat, 2)} {Stat.MurderManslaughter} </th>
                 <th>{this.getObjectName(Stat, 3)} {Stat.Rape} </th>

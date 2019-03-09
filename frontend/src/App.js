@@ -6,6 +6,7 @@ import Cities from './Components/Cities';
 import States from'./Components/States';
 import Navigation from "./Components/Navigation";
 
+//I changed the App.js to turn in to a router, this code does not need to be touched at all, To edit the States page go to /Components/States.js to edit the Cities page go to /Components/Cities.js.
 class App extends Component {
   render() {
     return (
