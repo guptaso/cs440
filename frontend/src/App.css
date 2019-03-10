@@ -4,9 +4,11 @@ html {
 	border: 5px solid black;
 }
 body {
+	font-family: "Consolas", Times, serif;
 	margin: 0;
 	height: 100%;
-	border: 5px solid yellow;
+	border: 5px solid black;
+	background-color: black;
 }
 .StateSelect{
 
@@ -16,20 +18,22 @@ body {
 	float: left;
 	width: 33.33%;
 	padding: 10px;
-	background-color: lightgreen;
+	background-color: lightgray;
 }
 .columnbottom {
 	float: left;
 	width: 50%;
 	padding: 10px;
-	background-color: lightblue;
+	background-color: black;
+	border: 5px solid black;
+	color: red;
 }
 
 .toprow:after{
 	content: "";
 	display: table;
 	clear: both;
-	background-color: lightgreen;
+	background-color: lightgray;
 }
 .bottomrow:after{
 	content: "";
@@ -49,16 +53,34 @@ body {
 }
 
 .InfoDisplay{
-	background-color: lightgreen;
 	margin: 0;
 	max-height: 400px;
 }
 .StateImgDiv {
 	max-width: 100%;
-	max-height: 700px;
+	max-height: 650px;
 }
 .DisplayStats{
 	max-height: 50%;
 	max-width: 100%;
-	background-color: lightgreen;
+	background-color: black;
+	color: white;
+}
+.input, .StateSelect, .CrimeSelect{
+	height: 100px;
+	background-color: #949191;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border: 5px solid white;
+}
+.b_border{
+	border: 5px solid black;
+	background-color: white;
 }

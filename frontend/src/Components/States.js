@@ -203,9 +203,6 @@ handleSubmit(e){
 		case '/State/Oregon': 
 			State_Img = Oregon;
 			break;
-		case '/State/Alabama': 
-			State_Img = Alabama;
-			break;
 		case '/State/Pennsylvania': 
 			State_Img = Pennsylvania;
 			break;
@@ -232,6 +229,9 @@ handleSubmit(e){
 			break;
 		case '/State/Virginia': 
 			State_Img = Virginia;
+			break;
+		case '/State/Washington': 
+			State_Img = Washington;
 			break;
 		case '/State/West Virginia': 
 			State_Img = West_Virginia;
@@ -267,9 +267,10 @@ render() {
     return (
 	<body>
 		<div className="toprow"> 
+			<div>
 			<div className="columntop">
 			{/*This is where the user will select the State */}
-				<div className="StateSelect">      
+				<div className="StateSelect" class="StateSelect">      
 					<p>Select The State: </p>
 				{/* this.state.State is making it so our react state variable "State" is set to the value currently selected, this.handleChange ensures the changes happen. */}
 					<select value={this.state.State} onChange={this.handleChange} name="State" form="Inputform">
@@ -351,44 +352,65 @@ render() {
 				
 				{/*Here is our actual form that holds everything as well as the submit button, notice on the form it has a "onSubmit" which will trigger our handleSubmit function.*/}
 				<div className="SubmitButton">
-					<br/>
 					<form id="Inputform" onSubmit={this.handleSubmit} >
-						<input type="submit" value="Submit"/>
+						<input class="input" type="submit" value="Submit"/>
 					</form>
 				</div>
+			</div>
 			</div>
 		</div>
 		<div className="bottomrow">
 			<div className="columnbottom">
-				<div className="InfoDisplay">
+				<div className="InfoDisplay" class="b_border">
 					<img className="StateImgDiv" src={State_Img} alt="" />
 				</div>
 			</div>
 			<div className="columnbottom">
-			Bottom Half
-			{/* This is where the reponse from the API which is grabbed by our handleSubmit function is displayed.*/}
-				<table className="DisplayStats">
-					<div>
-						{/* This "map" is a for loop that will loop through our react state object "Stat" which is an object that holds and array of JSON objects, this will display all JSON held in our reponse. */}
-						{this.state.Stat.map(Stat => 
-						<tr key={Stat._id}>
-							{/* On the left we call the getObjectName to get the Name of the Statistic for example MurderManSlaughter, on the right we are grabbing the actual statistic for example 206.
-							Together these would display as MurderManSlaughter 206*/}
-							<tr><th>{this.getObjectName(Stat, 1)} {Stat.ViolentCrime} </th></tr>
-							<tr><th>{this.getObjectName(Stat, 2)} {Stat.MurderManslaughter} </th></tr>
-							<tr><th>{this.getObjectName(Stat, 3)} {Stat.Rape} </th></tr>
-							<tr><th>{this.getObjectName(Stat, 4)} {Stat.Robbery} </th></tr>
-							<tr><th>{this.getObjectName(Stat, 5)} {Stat.Assault} </th></tr>
-							<tr><th>{this.getObjectName(Stat, 6)} {Stat.PropertyCrime} </th></tr>
-							<tr><th>{this.getObjectName(Stat, 7)} {Stat.Burglary} </th></tr>
-							<tr><th>{this.getObjectName(Stat, 8)} {Stat.Theft} </th></tr>
-							<tr><th>{this.getObjectName(Stat, 9)} {Stat.MotorTheft} </th></tr>
-							<tr><th>{this.getObjectName(Stat, 10)}  {Stat.Arson} </th></tr>
-						</tr>
-						)}
+				<div className="toprow">
+					<div className="columnbottom">
+					{/* This is where the reponse from the API which is grabbed by our handleSubmit function is displayed.*/}
+						<table className="Displa18-45yStats">
+								{/* This "map" is a for loop that will loop through our react state object "Stat" which is an object that holds and array of JSON objects, this will display all JSON held in our reponse. */}
+							{this.state.Stat.map(Stat => 
+							<tr key={Stat._id}>
+								{/* On the left we call the getObjectName to get the Name of the Statistic for example MurderManSlaughter, on the right we are grabbing the actual statistic for example 206.
+								Together these would display as MurderManSlaughter 206*/}
+								<tr><th>{this.getObjectName(Stat, 1)}</th></tr>
+								<tr><th>{this.getObjectName(Stat, 2)}</th></tr>
+								<tr><th>{this.getObjectName(Stat, 3)}</th></tr>
+								<tr><th>{this.getObjectName(Stat, 4)}</th></tr>
+								<tr><th>{this.getObjectName(Stat, 5)}</th></tr>
+								<tr><th>{this.getObjectName(Stat, 6)}</th></tr>
+								<tr><th>{this.getObjectName(Stat, 7)}</th></tr>
+								<tr><th>{this.getObjectName(Stat, 8)}</th></tr>
+								<tr><th>{this.getObjectName(Stat, 9)}</th></tr>
+								<tr><th>{this.getObjectName(Stat, 10)}</th></tr>
+							</tr>
+							)}
+						</table>
 					</div>
-				</table>
-			
+					<div className="columnbottom">
+						<table className="DisplayStats">
+							{/* This "map" is a for loop that will loop through our react state object "Stat" which is an object that holds and array of JSON objects, this will display all JSON held in our reponse. */}
+							{this.state.Stat.map(Stat => 
+							<tr key={Stat._id}>
+								{/* On the left we call the getObjectName to get the Name of the Statistic for example MurderManSlaughter, on the right we are grabbing the actual statistic for example 206.
+								Together these would display as MurderManSlaughter 206*/}
+								<tr><th>{Stat.ViolentCrime}</th></tr>
+								<tr><th>{Stat.MurderManslaughter}</th></tr>
+								<tr><th>{Stat.Rape}</th></tr>
+								<tr><th>{Stat.Robbery}</th></tr>
+								<tr><th>{Stat.Assault}</th></tr>
+								<tr><th>{Stat.PropertyCrime}</th></tr>
+								<tr><th>{Stat.Burglary}</th></tr>
+								<tr><th>{Stat.Theft}</th></tr>
+								<tr><th>{Stat.MotorTheft}</th></tr>
+								<tr><th>{Stat.Arson}</th></tr>
+							</tr>
+							)}
+						</table>						
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
