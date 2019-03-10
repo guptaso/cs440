@@ -1,11 +1,57 @@
 import React, { Component } from 'react';
 import '../App.css';
+
 import All_States from './images/All States.png';
 import Alabama from './images/Alabama.png';
+import Alaska from './images/Alaska.png';
+import Arizona from './images/Arizona.png';
+import Arkansas from './images/Arkansas.png';
+import California from './images/California.png';
+import Colorado from './images/Colorado.png';
+import Connecticut from './images/Connecticut.png';
+import Delaware from './images/Delaware.png';
+import Florida from './images/Florida.png';
+import Georgia from './images/Georgia.png';
+import Hawaii from './images/Hawaii.png';
+import Idaho from './images/Idaho.png';
+import Illinois from './images/Illinois.png';
+import Indiana from './images/Indiana.png';
+import Iowa from './images/Iowa.png';
+import Kansas from './images/Kansas.png';
+import Kentucky from './images/Kentucky.png';
+import Louisiana from './images/Louisiana.png';
+import Maine from './images/Maine.png';
+import Maryland from './images/Maryland.png';
+import Massachusetts from './images/Massachusetts.png';
+import Michigan from './images/Michigan.png';
+import Minnesota from './images/Minnesota.png';
+import Mississippi from './images/Mississippi.png';
+import Missouri from './images/Missouri.png';
+import Montana from './images/Montana.png';
+import Nebraska from './images/Nebraska.png';
+import Nevada from './images/Nevada.png';
+import New_Hampshire from './images/New Hampshire.png';
+import New_Jersey from './images/New Jersey.png';
+import New_Mexico from './images/New Mexico.png';
+import New_York from './images/New York.png';
+import North_Carolina from './images/North Carolina.png';
+import North_Dakota from './images/North Dakota.png';
+import Ohio from './images/Ohio.png';
+import Oklahoma from './images/Oklahoma.png';
 import Oregon from './images/Oregon.png';
+import Pennsylvania from './images/Pennsylvania.png';
+import Rhode_Island from './images/Rhode Island.png';
+import South_Carolina from './images/South Carolina.png';
+import South_Dakota from './images/South Dakota.png';
 import Tennessee from './images/Tennessee.png';
-
-//import { ReactComponent as Oregon } from './images/Oregon.png';
+import Texas from './images/Texas.png';
+import Utah from './images/Utah.png';
+import Vermont from './images/Vermont.png';
+import Virginia from './images/Virginia.png';
+import Washington from './images/Washington.png';
+import West_Virginia from './images/West Virginia.png';
+import Wisconsin from './images/Wisconsin.png';
+import Wyoming from './images/Wyoming.png';
 
 var State_Img = All_States;
 
@@ -48,12 +94,153 @@ handleSubmit(e){
 	switch (State_Name) {
 		case '/State/Alabama': 
 			State_Img = Alabama;
+			break;
+		case '/State/Alaska': 
+			State_Img = Alaska;
 			break;	
+		case '/State/Arizona': 
+			State_Img = Arizona;
+			break;
+		case '/State/Arkansas': 
+			State_Img = Arkansas;
+			break;
+		case '/State/California': 
+			State_Img = California;
+			break;
+		case '/State/Colorado': 
+			State_Img = Colorado;
+			break;
+		case '/State/Connecticut': 
+			State_Img = Connecticut;
+			break;
+		case '/State/Delaware': 
+			State_Img = Delaware;
+			break;
+		case '/State/Florida': 
+			State_Img = Florida;
+			break;
+		case '/State/Georgia': 
+			State_Img = Georgia;
+			break;
+		case '/State/Hawaii': 
+			State_Img = Hawaii;
+			break;
+		case '/State/Idaho': 
+			State_Img = Idaho;
+			break;
+		case '/State/Illinois': 
+			State_Img = Illinois;
+			break;
+		case '/State/Indiana': 
+			State_Img = Indiana;
+			break;
+		case '/State/Iowa': 
+			State_Img = Iowa;
+			break;
+		case '/State/Kansas': 
+			State_Img = Kansas;
+			break;
+		case '/State/Kentucky': 
+			State_Img = Kentucky;
+			break;
+		case '/State/Louisiana': 
+			State_Img = Louisiana;
+			break;
+		case '/State/Maine': 
+			State_Img = Maine;
+			break;
+		case '/State/Maryland': 
+			State_Img = Maryland;
+			break;
+		case '/State/Massachusetts': 
+			State_Img = Massachusetts;
+			break;
+		case '/State/Michigan': 
+			State_Img = Michigan;
+			break;
+		case '/State/Minnesota': 
+			State_Img = Minnesota;
+			break;
+		case '/State/Mississippi': 
+			State_Img = Mississippi;
+			break;
+		case '/State/Missouri': 
+			State_Img = Missouri;
+			break;
+		case '/State/Montana': 
+			State_Img = Montana;
+			break;
+		case '/State/Nebraska': 
+			State_Img = Nebraska;
+			break;
+		case '/State/Nevada': 
+			State_Img = Nevada;
+			break;
+		case '/State/New Hampshire': 
+			State_Img = New_Hampshire;
+			break;
+		case '/State/New Jersey': 
+			State_Img = New_Jersey;
+			break;
+		case '/State/New Mexico': 
+			State_Img = New_Mexico;
+			break;
+		case '/State/New York': 
+			State_Img = New_York;
+			break;
+		case '/State/North Carolina': 
+			State_Img = North_Carolina;
+			break;
+		case '/State/North Dakota': 
+			State_Img = North_Dakota;
+			break;
+		case '/State/Ohio': 
+			State_Img = Ohio;
+			break;
+		case '/State/Oklahoma': 
+			State_Img = Oklahoma;
+			break;
 		case '/State/Oregon': 
 			State_Img = Oregon;
 			break;
+		case '/State/Alabama': 
+			State_Img = Alabama;
+			break;
+		case '/State/Pennsylvania': 
+			State_Img = Pennsylvania;
+			break;
+		case '/State/Rhode Island': 
+			State_Img = Rhode_Island;
+			break;
+		case '/State/South Carolina': 
+			State_Img = South_Carolina;
+			break;
+		case '/State/South Dakota': 
+			State_Img = South_Dakota;
+			break;
 		case '/State/Tennessee': 
 			State_Img = Tennessee;
+			break;
+		case '/State/Texas': 
+			State_Img = Texas;
+			break;
+		case '/State/Utah': 
+			State_Img = Utah;
+			break;
+		case '/State/Vermont': 
+			State_Img = Vermont;
+			break;
+		case '/State/Virginia': 
+			State_Img = Virginia;
+			break;
+		case '/State/West Virginia': 
+			State_Img = West_Virginia;
+			break;
+		case '/State/Wisconsin': 
+			State_Img = Wisconsin;
+			break;
+		case '/State/Wyoming': 
+			State_Img = Wyoming;
 			break;
 		default:
 			State_Img = All_States;
