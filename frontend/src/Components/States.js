@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import '../App.css';
+import All_States from './images/All States.png';
 import Alabama from './images/Alabama.png';
 import Oregon from './images/Oregon.png';
+import Tennessee from './images/Tennessee.png';
 
-var State_Img = "All States";
+//import { ReactComponent as Oregon } from './images/Oregon.png';
+
+var State_Img = All_States;
 
 class States extends Component {
  constructor(props){
@@ -22,30 +26,37 @@ class States extends Component {
    this.getObjectName = this.getObjectName.bind(this);
  }
 //Changing the objects currently held in the react state to whatever the user selects for example if State = Arizona and a user then changes their choice to Alaska, this function makes State=Alaska.
- handleChange(e) {
-  this.setState({
-    [e.target.name]: e.target.value
-  })
- }
-
+handleChange(e) {
+	this.setState({
+		[e.target.name]: e.target.value
+	})
+}
+/*
 getStateImage(State_Name){
   switch (State_Name) {
     case '/State/Alabama': 
 	console.log("Test");
+	break;
 	return Alabama;
     default: break;
   }
 }
-
+*/
 //This is the submit handler that is called when a user submits their inputs.
 handleSubmit(e){
 	var State_Name = this.state.State;
 	switch (State_Name) {
 		case '/State/Alabama': 
 			State_Img = Alabama;
+			break;	
 		case '/State/Oregon': 
 			State_Img = Oregon;
+			break;
+		case '/State/Tennessee': 
+			State_Img = Tennessee;
+			break;
 		default:
+			State_Img = All_States;
 			break;
 	}
 
@@ -65,9 +76,6 @@ getObjectName(obj, index){
   var name = Object.keys(obj)[index];
   return name;
 }
-
- 
-
 render() {
     return (
 	<body>
@@ -158,7 +166,7 @@ render() {
 				<div className="SubmitButton">
 					<br/>
 					<form id="Inputform" onSubmit={this.handleSubmit} >
-						<input type="submit" value="Submit" />
+						<input type="submit" value="Submit"/>
 					</form>
 				</div>
 			</div>
@@ -166,7 +174,7 @@ render() {
 		<div className="bottomrow">
 			<div className="columnbottom">
 				<div className="InfoDisplay">
-					<img className="StateImgDiv" src={State_Img}/>
+					<img className="StateImgDiv" src={State_Img} alt="" />
 				</div>
 			</div>
 			<div className="columnbottom">
@@ -200,6 +208,5 @@ render() {
     );
   }
 }
-
 
 export default States;
