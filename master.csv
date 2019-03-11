@@ -189,45 +189,33 @@ Wetumpka,7921,24,0,3,4,17,359,47,306,6,,Alabama
 Winfield,4576,11,0,1,3,7,176,51,112,13,,Alabama
 Woodstock,1524,2,0,1,0,1,43,9,26,8,,Alabama
 York,2375,7,1,0,2,4,39,13,24,2,,Alabama
-City,Population,"Violent
-crime","Murder and
-nonnegligent
-manslaughter","Rape
-(revised
-definition)1",Robbery,"Aggravated
-assault","Property
-crime",Burglary,"Larceny-
-theft","Motor
-vehicle
-theft",Arson,Alabama
->ALASKA,,,,,,,,,,,,Alabama
-Anchorage,301239,3226,26,517,621,2062,11801,1685,8962,1154,106,Alabama
-Bethel,6497,94,2,20,9,63,172,58,76,38,7,Alabama
-Bristol Bay Borough,942,0,0,0,0,0,6,1,3,2,0,Alabama
-Cordova,2220,6,0,0,0,6,16,3,13,0,0,Alabama
-Craig,1265,7,0,0,0,7,21,7,14,0,0,Alabama
-Dillingham,2411,43,0,15,3,25,56,11,41,4,0,Alabama
-Fairbanks,32677,157,1,14,24,118,1192,149,938,105,7,Alabama
-Haines,2567,10,0,1,0,9,24,12,12,0,0,Alabama
-Homer,5511,7,0,0,1,6,193,13,177,3,0,Alabama
-Juneau,32482,285,4,73,28,180,1222,168,995,59,9,Alabama
-Kenai,7680,52,3,20,3,26,324,25,288,11,0,Alabama
-Ketchikan,8286,31,1,6,0,24,285,20,251,14,0,Alabama
-Kodiak,6345,47,0,5,4,38,217,38,154,25,1,Alabama
-Kotzebue,3304,87,0,16,8,63,203,62,112,29,4,Alabama
-Nome,3832,47,0,1,1,45,45,9,30,6,0,Alabama
-North Pole,2190,9,0,0,3,6,117,8,98,11,0,Alabama
-North Slope Borough,9707,80,0,9,1,70,102,35,47,20,4,Alabama
-Palmer,6652,22,0,6,0,16,121,14,98,9,0,Alabama
-Petersburg,3130,10,0,1,0,9,83,12,63,8,1,Alabama
-Seward,2489,13,0,1,1,11,47,12,33,2,0,Alabama
-Sitka,8850,14,0,0,1,13,147,10,132,5,1,Alabama
-Skagway,1049,0,0,0,0,0,20,3,17,0,0,Alabama
-Soldotna,4512,30,0,5,0,25,176,15,145,16,3,Alabama
-Unalaska,4554,10,0,2,0,8,50,3,41,6,0,Alabama
-Valdez,3903,12,0,2,0,10,82,5,71,6,0,Alabama
-Wasilla,9099,38,0,1,8,29,637,49,532,56,0,Alabama
-Wrangell,2351,1,0,1,0,0,32,8,22,2,0,Alabama
+Anchorage,301239,3226,26,517,621,2062,11801,1685,8962,1154,106,Alaska
+Bethel,6497,94,2,20,9,63,172,58,76,38,7,Alaska
+Bristol Bay Borough,942,0,0,0,0,0,6,1,3,2,0,Alaska
+Cordova,2220,6,0,0,0,6,16,3,13,0,0,Alaska
+Craig,1265,7,0,0,0,7,21,7,14,0,0,Alaska
+Dillingham,2411,43,0,15,3,25,56,11,41,4,0,Alaska
+Fairbanks,32677,157,1,14,24,118,1192,149,938,105,7,Alaska
+Haines,2567,10,0,1,0,9,24,12,12,0,0,Alaska
+Homer,5511,7,0,0,1,6,193,13,177,3,0,Alaska
+Juneau,32482,285,4,73,28,180,1222,168,995,59,9,Alaska
+Kenai,7680,52,3,20,3,26,324,25,288,11,0,Alaska
+Ketchikan,8286,31,1,6,0,24,285,20,251,14,0,Alaska
+Kodiak,6345,47,0,5,4,38,217,38,154,25,1,Alaska
+Kotzebue,3304,87,0,16,8,63,203,62,112,29,4,Alaska
+Nome,3832,47,0,1,1,45,45,9,30,6,0,Alaska
+North Pole,2190,9,0,0,3,6,117,8,98,11,0,Alaska
+North Slope Borough,9707,80,0,9,1,70,102,35,47,20,4,Alaska
+Palmer,6652,22,0,6,0,16,121,14,98,9,0,Alaska
+Petersburg,3130,10,0,1,0,9,83,12,63,8,1,Alaska
+Seward,2489,13,0,1,1,11,47,12,33,2,0,Alaska
+Sitka,8850,14,0,0,1,13,147,10,132,5,1,Alaska
+Skagway,1049,0,0,0,0,0,20,3,17,0,0,Alaska
+Soldotna,4512,30,0,5,0,25,176,15,145,16,3,Alaska
+Unalaska,4554,10,0,2,0,8,50,3,41,6,0,Alaska
+Valdez,3903,12,0,2,0,10,82,5,71,6,0,Alaska
+Wasilla,9099,38,0,1,8,29,637,49,532,56,0,Alaska
+Wrangell,2351,1,0,1,0,0,32,8,22,2,0,Alaska
 Apache Junction,38519,96,0,3,11,82,1282,352,836,94,7,Arizona
 Avondale,80533,279,8,40,81,150,3096,528,2351,217,11,Arizona
 Buckeye,61726,28,2,1,7,18,1103,189,855,59,12,Arizona

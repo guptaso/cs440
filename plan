@@ -1,0 +1,5 @@
+Ubuntu__Subsystem 	->	Front_End / Backend / MongoDB
+	
+MongoDB (master.csv)	->	mongodb			-> 	localhost:4000	
+Back_End		->	Node.js			->	localhost:4000
+Front_End		->	React / Node.js		->	localhost:3000

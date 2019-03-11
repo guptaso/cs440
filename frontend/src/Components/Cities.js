@@ -166,7 +166,7 @@ getObjectName(obj, index){
                 <th>{this.getObjectName(Stat, 9)} {Stat.Burglary} </th>
                 <th>{this.getObjectName(Stat, 10)} {Stat.Theft} </th>
                 <th>{this.getObjectName(Stat, 11)} {Stat.MotorTheft} </th>
-                <th>{this.getObjectName(Stat, 12)}  {Stat.Arson} </th>
+                <th>{this.getObjectName(Stat, 12)} {Stat.Arson} </th>
               </tr>
             )}
           </tbody>
