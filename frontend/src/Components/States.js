@@ -267,7 +267,6 @@ render() {
     return (
 	<body>
 		<div className="toprow"> 
-			<div>
 			<div className="columntop">
 			{/*This is where the user will select the State */}
 				<div className="StateSelect" class="StateSelect">      
@@ -329,7 +328,7 @@ render() {
 				</div>
 			</div>
 			<div className="columntop">
-			
+		
 				{/*Here is a input for the user to select a crime, the value for the react state value "Crime" is set the same as above.  */}
 				<div className="CrimeSelect">
 					<p>Select The Crime: </p>
@@ -349,14 +348,13 @@ render() {
 				</div>
 			</div>
 			<div className="columntop">
-				
+			
 				{/*Here is our actual form that holds everything as well as the submit button, notice on the form it has a "onSubmit" which will trigger our handleSubmit function.*/}
 				<div className="SubmitButton">
 					<form id="Inputform" onSubmit={this.handleSubmit} >
 						<input class="input" type="submit" value="Submit"/>
 					</form>
 				</div>
-			</div>
 			</div>
 		</div>
 		<div className="bottomrow">
@@ -369,7 +367,7 @@ render() {
 				<div className="toprow">
 					<div className="columnbottom">
 					{/* This is where the reponse from the API which is grabbed by our handleSubmit function is displayed.*/}
-						<table className="Displa18-45yStats">
+						<table className="DisplayStats-red">
 								{/* This "map" is a for loop that will loop through our react state object "Stat" which is an object that holds and array of JSON objects, this will display all JSON held in our reponse. */}
 							{this.state.Stat.map(Stat => 
 							<tr key={Stat._id}>
