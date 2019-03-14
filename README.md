@@ -1,11 +1,11 @@
-# THIS PROGRAM IS DESIGNED TO FUNCTION IN A LINUX ENVIRONMENT
+# This program is designed to run in a Linux environment.
 ## Begin by cloning the respository to your local machine.
 ### Ensure all of the required downloads below are on your machine. 
-#### Install Node.js  version 8.15.0 or greater
-#### Install MongoDB
-#### Install ReactJS version 16.8.3 or grater
+#### -Install Node.js  version 8.15.0 or greater
+#### -Install MongoDB
+#### -Install ReactJS version 16.8.3 or grater
 
-
+## Once everything is properly downloaded follow the steps below.
 #### Start MongoDB
 ```
 sudo service mongodb start
